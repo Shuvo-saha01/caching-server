@@ -1,28 +1,14 @@
 {
   "name": "caching-server",
   "version": "1.0.0",
-  "description": "Express backend server with Docker and Docker Compose",
+  "private": true,
   "type": "module",
-  "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
-  },
-  "keywords": [
-    "express",
-    "docker",
-    "docker-compose",
-    "backend"
-  ],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "morgan": "^1.10.0"
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
   }
 }
