@@ -5,10 +5,16 @@
   "type": "module",
   "scripts": {
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "origin": "node origin/index.ts",
+    "origin:watch": "node --watch origin/index.ts"
   },
   "devDependencies": {
     "typescript": "^7.0.2",
     "vitest": "^5.1.1"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "express": "^5.3.0"
   }
 }
