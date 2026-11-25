@@ -19,15 +19,22 @@ export class CacheStore {
     }
 
     return entry
+    // TODO: Handle the lazy expiry check
   }
 
   set(key: string, entry: CacheEntry): void {
-    // TODO: implement
-    throw new Error('Not implemented')
+    try {
+      this.memory.set(key, entry)
+    } catch (error) {
+      throw new Error(`Failed to cache entry: ${key}`, { cause: error })
+    }
   }
 
-  delete(key: string): boolean {
-    // TODO: implement
-    throw new Error('Not implemented')
+  delete(key: string): void {
+    try {
+      this.memory.delete(key)
+    } catch (error) {
+      throw new Error(`Failed to delete cache entry: ${key}`, { cause: error })
+    }
   }
 }
